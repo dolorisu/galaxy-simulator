@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <h1>🌌 Galaxy Simulator</h1>
+      <div class="row">
+        <label for="stars">Stars</label>
+        <input id="stars" type="range" min="500" max="8000" value="3000" step="100" />
+        <span id="starsVal">3000</span>
+      </div>
+      <div class="row">
+        <label for="speed">Rotation Speed</label>
+        <input id="speed" type="range" min="0.0002" max="0.003" value="0.0012" step="0.0001" />
+        <span id="speedVal">0.0012</span>
+      </div>
+      <div class="row">
+        <label for="arms">Spiral Arms</label>
+        <input id="arms" type="range" min="2" max="8" value="4" step="1" />
+        <span id="armsVal">4</span>
+      </div>
+      <div class="actions">
+        <button id="regenerate">Regenerate</button>
+        <button id="toggle">Pause</button>
+      </div>
+      <p class="hint">Drag mouse to pan • Wheel to zoom</p>
+    </div>
+
+    <canvas id="galaxy"></canvas>
+    <script src="app.js"></script>
+  </body>
+</html>
